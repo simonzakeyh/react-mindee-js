@@ -7,7 +7,7 @@ import {
 
 import { MAX_PDF_SCALE, PDF_RESOLUTION } from '@/common/constants'
 
-GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${version}/pdf.worker.js`
+GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('pdfjs/pdf.worker.min.js');
 
 const getImageFromPage = async (
   _document: PDFDocumentProxy,
